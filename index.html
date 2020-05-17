@@ -6,8 +6,10 @@ Weather App
 </head>
 <body>
 <div id="app"> 
-<input type="text">
+<input type="text" v-model="query">
 <button type="submit" @click="getWeather">Submit</button>
+<div class="currentPlace"> {{weather.name}}</div>
+<div class="currentWeather" v-if="typeof weather.main != 'undefined'"> {{weather.main.temp.toFixed(1)}}</div>
 </div>
 </body>
 <script src="https://unpkg.com/vue"></script>
