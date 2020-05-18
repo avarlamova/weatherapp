@@ -1,0 +1,21 @@
+body {
+    background-color:#40cfff;
+    font-family: 'Jost', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.searchbar {
+    width: 330px;
+    margin-left: 30%;
+    height: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+.currentWeather {
+color: white;
+margin-top: 3em;
+text-align: center;
+font-size: 32px;
+}

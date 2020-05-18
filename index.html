@@ -1,15 +1,20 @@
 <!DOCTYPE html> 
 <html>
-
 <head>
-Weather App
+<title>Weather App</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="app"> 
-<input type="text" v-model="query">
+<h1>Search for the city to get weather</h1>
+<input class="searchbar"type="text" v-model="query" v-on:keyup.enter="getWeather" placeholder="type...">
 <button type="submit" @click="getWeather">Submit</button>
-<div class="currentPlace"> {{weather.name}}</div>
-<div class="currentWeather" v-if="typeof weather.main != 'undefined'"> {{weather.main.temp.toFixed(1)}}</div>
+<div  class='currentWeather' v-if="typeof weather.main != 'undefined'">
+<div> {{weather.name}}, {{weather.sys.country}}</div>
+<div> {{weather.main.temp.toFixed(1)}}</div>
+<div>{{weather.weather[0].main}}</div>
+</div>
 </div>
 </body>
 <script src="https://unpkg.com/vue"></script>
