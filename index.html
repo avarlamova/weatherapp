@@ -2,20 +2,31 @@
 <html>
 <head>
 <title>Weather App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="app"> 
+
+<div v-bind:class = "{cloudy: isCloudy, rainy: isRainy, snowy: isSnowy, clear: isClear}" id="app"> 
 <h1>Search for the city to get weather</h1>
-<input class="searchbar"type="text" v-model="query" v-on:keyup.enter="getWeather" placeholder="type...">
+<input 
+    class="searchbar" 
+    type="text" 
+    v-model="query" 
+    v-on:keyup.enter="getWeather" 
+    placeholder="type..."/>
+
 <button type="submit" @click="getWeather">Submit</button>
-<div  class='currentWeather' v-if="typeof weather.main != 'undefined'">
-<div> {{weather.name}}, {{weather.sys.country}}</div>
-<div> {{weather.main.temp.toFixed(1)}}</div>
-<div>{{weather.weather[0].main}}</div>
+
+    <div class='current-weather' v-if="typeof weather.main != 'undefined'">
+        <div> {{weather.name}}, {{weather.sys.country}}</div>
+        <div> {{weather.main.temp.toFixed(1)}}</div>
+        <div>{{weather.weather[0].description}}</div>
+    </div>
+
 </div>
-</div>
+
 </body>
 <script src="https://unpkg.com/vue"></script>
 <script src="script.js"></script>

@@ -1,21 +1,36 @@
 body {
-    background-color:#40cfff;
+    background-image: url(https://million-wallpapers.ru/wallpapers/1/64/285853157425055.jpg);
     font-family: 'Jost', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 h1 {
     text-align: center;
 }
 .searchbar {
     width: 330px;
-    margin-left: 30%;
+    margin-left: 35%;
     height: 40px;
     border-radius: 5px;
     box-sizing: border-box;
-
 }
-.currentWeather {
-color: white;
-margin-top: 3em;
-text-align: center;
-font-size: 32px;
+
+.current-weather {
+    color: white;
+    margin-top: 3em;
+    text-align: center;
+    font-size: 32px;
+    float: right;
+}
+
+.cloudy {
+    background-image: url(https://99px.ru/sstorage/53/2015/09/tmb_141718_7864.jpg);
+}
+
+.clear {
+    background-color: url(https://i.pinimg.com/originals/d5/3e/4d/d53e4d23e32aa3217312a22107a2f343.jpg);
+}
+
+.rainy {
+    background-color: url(https://s002.radikal.ru/i200/1001/b6/eb73ace95848.jpg);
 }
