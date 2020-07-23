@@ -3,15 +3,25 @@ body {
     font-family: 'Jost', sans-serif;
     margin: 0px;
     padding: 0px;
+    height: 100%;
+    width: 100%;
 }
 h1 {
+    margin-top: 3rem;
     text-align: center;
 }
+
+button {
+    font-family: inherit;
+}
+
 .searchbar {
+    font-family: inherit;
+    font-size: 30px;
     width: 330px;
     margin-left: 35%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
@@ -19,8 +29,16 @@ h1 {
     color: white;
     margin-top: 3em;
     text-align: center;
-    font-size: 32px;
-    float: right;
+    font-size: 38px;
+    margin: inherit;
+}
+
+.weather-box {
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 35px;
+    height: auto;
+    width: 50%;
 }
 
 .cloudy {
@@ -28,9 +46,9 @@ h1 {
 }
 
 .clear {
-    background-color: url(https://i.pinimg.com/originals/d5/3e/4d/d53e4d23e32aa3217312a22107a2f343.jpg);
+    background-image: url(https://i.pinimg.com/originals/d5/3e/4d/d53e4d23e32aa3217312a22107a2f343.jpg);
 }
 
 .rainy {
-    background-color: url(https://s002.radikal.ru/i200/1001/b6/eb73ace95848.jpg);
+    background-image: url(https://s002.radikal.ru/i200/1001/b6/eb73ace95848.jpg);
 }
