@@ -19,8 +19,7 @@
 
 <button type="submit" @click="getWeather">Submit</button>
 
-<div v-bind:class = "{cloudy: isCloudy, rainy: isRainy, snowy: isSnowy, clear: isClear}" 
-class="weather-box"> 
+<div class="weather-box"> 
     <div class='current-weather' v-if="typeof weather.main != 'undefined'">
         <div> {{date}}</div>
         <div> {{weather.name}}, {{weather.sys.country}}</div>
@@ -29,7 +28,6 @@ class="weather-box">
         <div> {{time}} </div>
     </div>
 </div>
-
 </div>
 
 </body>

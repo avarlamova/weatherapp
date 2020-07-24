@@ -25,28 +25,8 @@ new Vue ({
                 let t = new Date ();
                 let hours = t.getHours();
                 let minutes = t.getMinutes();
-                return `${hours} ${minutes}`
+                return `${hours}:${minutes}`
             },
-
-            isCloudy: function () {
-                if (typeof this.weather.main !='undefined' && this.weather.weather[0].main === 'Clouds')
-                return true;
-            },
-
-            isRainy: function () {
-                if (typeof this.weather.main !='undefined' && this.weather.weather[0].main === 'Rain')
-                return true;
-                },
-
-            isClear: function () {
-                if (typeof this.weather.main !='undefined' && this.weather.weather[0].main === 'Clear')
-                return true;
-                },
-
-            isSnowy: function () {
-                if (typeof this.weather.main !='undefined' && this.weather.weather[0].main === 'Snow')
-                return true;
-                }    
     },
     
     methods: {
@@ -60,6 +40,20 @@ new Vue ({
 
           setWeather (results) {
             this.weather = results;
+
+            //different styles for different weather types
+
+            if (typeof this.weather.main !='undefined' && this.weather.weather[0].main === 'Clouds')
+                document.querySelector('body').classList.toggle('cloudy');
+
+            if (typeof this.weather.main !='undefined' && this.weather.weather[0].main === 'Rain')
+                document.querySelector('body').classList.toggle('rainy');
+
+            if (typeof this.weather.main !='undefined' && this.weather.weather[0].main === 'Clear')
+                document.querySelector('body').classList.toggle('clear');
+
+            if (typeof this.weather.main !='undefined' && this.weather.weather[0].main === 'Snow')
+                document.querySelector('body').classList.toggle('snowy');
           }
     },
 })
