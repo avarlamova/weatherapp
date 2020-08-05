@@ -17,15 +17,15 @@
     v-on:keyup.enter="getWeather" 
     placeholder="type..."/>
 
-<button type="submit" @click="getWeather">Submit</button>
+<button type="submit" @click="getWeather"> Submit</button>
 
 <div class="weather-box"> 
     <div class='current-weather' v-if="typeof weather.main != 'undefined'">
-        <div> {{date}}</div>
         <div> {{weather.name}}, {{weather.sys.country}}</div>
-        <div> {{weather.main.temp.toFixed(1)}}</div>
+        <div> {{weather.main.temp.toFixed(1)}} °C</div>
         <div>{{weather.weather[0].description}}</div>
-        <div> {{time}} </div>
+        <div v-if="typeof time != 'undefined'"> {{time}}</div>
+        <div v-if="typeof time != 'undefined'"> {{date}}</div>
     </div>
 </div>
 </div>
